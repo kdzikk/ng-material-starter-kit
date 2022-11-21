@@ -9,6 +9,7 @@ import {ProductListComponentModule} from "./components/product-list/product-list
 import {CryptoListComponentModule} from "./components/crypto-list/crypto-list.component-module";
 import {HolidaysSelectComponentModule} from "./components/holidays-select/holidays-select.component-module";
 import {CategoriesListComponentModule} from "./components/categories-list/categories-list.component-module";
+import {CheckboxCategoriesComponentModule} from "./components/checkbox-categories/checkbox-categories.component-module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {CategoriesListComponentModule} from "./components/categories-list/catego
     ProductListComponentModule,
     CryptoListComponentModule,
     HolidaysSelectComponentModule,
-    CategoriesListComponentModule
+    CategoriesListComponentModule,
+    CheckboxCategoriesComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
