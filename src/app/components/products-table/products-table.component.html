@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>Product list</mat-card-title>
+  <mat-card-content>
+    <table>
+      <tr>
+        <td>Image</td>
+        <td>Title</td>
+        <td>Category</td>
+        <td>Price</td>
+      </tr>
+      <tr *ngFor="let item of list$ | async">
+
+        <td><img [src]="item.image"></td>
+        <td>{{ item.title}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.price}}$</td>
+      </tr>
+    </table>
+  </mat-card-content>
+</mat-card>
