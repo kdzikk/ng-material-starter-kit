@@ -10,6 +10,7 @@ import {CryptoListComponentModule} from "./components/crypto-list/crypto-list.co
 import {HolidaysSelectComponentModule} from "./components/holidays-select/holidays-select.component-module";
 import {CategoriesListComponentModule} from "./components/categories-list/categories-list.component-module";
 import {CheckboxCategoriesComponentModule} from "./components/checkbox-categories/checkbox-categories.component-module";
+import {ProductUpdateServiceModule} from "./services/product-update.service-module";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {CheckboxCategoriesComponentModule} from "./components/checkbox-categorie
     CryptoListComponentModule,
     HolidaysSelectComponentModule,
     CategoriesListComponentModule,
-    CheckboxCategoriesComponentModule
+    CheckboxCategoriesComponentModule,
+    ProductUpdateServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
