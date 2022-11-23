@@ -1,20 +1,49 @@
-<mat-card>
-  <mat-card-title>Product list</mat-card-title>
-  <mat-card-content>
-    <table>
-      <tr>
-        <td>Image</td>
-        <td>Title</td>
-        <td>Category</td>
-        <td>Price</td>
-      </tr>
-      <tr *ngFor="let item of list$ | async">
+<!--<mat-card>-->
+<!--  <mat-card-title>Product list</mat-card-title>-->
+<!--  <mat-card-content>-->
+<!--    <table>-->
+<!--      <tr>-->
+<!--        <td>Image</td>-->
+<!--        <td>Title</td>-->
+<!--        <td>Category</td>-->
+<!--        <td>Price</td>-->
+<!--      </tr>-->
+<!--      <tr *ngFor="let item of list$ | async">-->
 
-        <td><img [src]="item.image"></td>
-        <td>{{ item.title}}</td>
-        <td>{{item.category}}</td>
-        <td>{{item.price}}$</td>
-      </tr>
-    </table>
-  </mat-card-content>
-</mat-card>
+<!--        <td><img [src]="item.image"></td>-->
+<!--        <td>{{ item.title}}</td>-->
+<!--        <td>{{item.category}}</td>-->
+<!--        <td>{{item.price}}$</td>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--  </mat-card-content>-->
+<!--</mat-card>-->
+
+
+ <ng-container *ngIf="list$ | async as list">
+      <table mat-table [dataSource]="list" class="mat-elevation-z8">         <!-- Column 1 -->
+        <ng-container matColumnDef="column1">
+          <th mat-header-cell *matHeaderCellDef> Image </th>
+          <td mat-cell *matCellDef="let item"><img [src]="item.image"> </td>
+        </ng-container>
+        <!-- Column 2 -->
+        <ng-container matColumnDef="column2">
+          <th mat-header-cell *matHeaderCellDef> Title </th>
+          <td mat-cell *matCellDef="let item"> {{item.title}} </td>
+        </ng-container>
+        <!-- Column 3 -->
+        <ng-container matColumnDef="column3">
+          <th mat-header-cell *matHeaderCellDef> Category </th>
+          <td mat-cell *matCellDef="let item"> {{item.category}} </td>
+        </ng-container>
+        <!-- Column 4 -->
+        <ng-container matColumnDef="column4">
+          <th mat-header-cell *matHeaderCellDef> Category </th>
+          <td mat-cell *matCellDef="let item"> {{item.price}}$ </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="['column1', 'column2', 'column3', 'column4']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['column1', 'column2', 'column3', 'column4'];"></tr>
+      </table>
+    </ng-container>
