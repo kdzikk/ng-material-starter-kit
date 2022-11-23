@@ -9,6 +9,7 @@ import { CategoriesMenuComponent } from './components/categories-menu/categories
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { CreateEmployeeComponent } from './components/create-employee/create-employee.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CryptoListComponentModule } from './components/crypto-list/crypto-list.component-module';
@@ -27,9 +28,12 @@ import { CreateEmployeeComponentModule } from './components/create-employee/crea
 import { CreateEmployeeServiceModule } from './services/create-employee.service-module';
 import { LoginComponentModule } from './components/login/login.component-module';
 import { LoginServiceModule } from './services/login.service-module';
+import { RegisterFormComponentModule } from './components/register-form/register-form.component-module';
+import { RegisterServiceModule } from './services/register.service-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'crypto', component: CryptoListComponent }, { path: 'public-holidays', component: HolidaysSelectComponent }, { path: 'categories', component: CategoriesListComponent }, { path: 'checkbox-categories', component: CheckboxCategoriesComponent }, { path: 'categories-menu', component: CategoriesMenuComponent }, { path: 'create-product', component: ProductFormComponent }, { path: 'create-employee', component: CreateEmployeeComponent }, { path: 'login', component: LoginComponent }]), ProductListComponentModule, ProductsServiceModule, CryptoListComponentModule, CryptosServiceModule, HolidaysSelectComponentModule, HolidaysServiceModule, CategoriesListComponentModule, CategoryServiceModule, CheckboxCategoriesComponentModule, CheckboxServiceModule, CategoriesMenuComponentModule, CategoriesMenuServiceModule, ProductFormComponentModule, ProductFormServiceModule, CreateEmployeeComponentModule, CreateEmployeeServiceModule, LoginComponentModule, LoginServiceModule],
+  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }, { path: 'crypto', component: CryptoListComponent }, { path: 'public-holidays', component: HolidaysSelectComponent }, { path: 'categories', component: CategoriesListComponent }, { path: 'checkbox-categories', component: CheckboxCategoriesComponent }, { path: 'categories-menu', component: CategoriesMenuComponent }, { path: 'create-product', component: ProductFormComponent }, { path: 'create-employee', component: CreateEmployeeComponent }, { path: 'login', component: LoginComponent }, { path: 'register', component: RegisterFormComponent }]), ProductListComponentModule, ProductsServiceModule, CryptoListComponentModule, CryptosServiceModule, HolidaysSelectComponentModule, HolidaysServiceModule, CategoriesListComponentModule, CategoryServiceModule, CheckboxCategoriesComponentModule, CheckboxServiceModule, CategoriesMenuComponentModule, CategoriesMenuServiceModule, ProductFormComponentModule, ProductFormServiceModule, CreateEmployeeComponentModule, CreateEmployeeServiceModule, LoginComponentModule, LoginServiceModule, RegisterFormComponentModule, RegisterServiceModule],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
