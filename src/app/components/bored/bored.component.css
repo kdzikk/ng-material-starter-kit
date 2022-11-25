@@ -1,7 +1,6 @@
 body{
   min-height: 100vh;
   width: 100%;
-  box-sizing: border-box;
   display:flex;
   justify-content: center;
   align-content: center;
@@ -11,16 +10,10 @@ body{
   background: linear-gradient(11deg, rgb(239, 239, 239) 0%, rgb(128, 113, 113) 100%);
 
 
+
 }
 
-
-section{
-  margin-top: 200px;
-  font-size: 24px;
-}
-
-h1{
-  color: #000000;
-  font-size: 46px !important;
-  margin-bottom: 90px !important;
+mat-card {
+  width: 400px;
+  height: 50px;
 }

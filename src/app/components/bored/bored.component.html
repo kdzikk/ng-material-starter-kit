@@ -1,7 +1,8 @@
-
-<section>
-  <h1>Are you bored?</h1>
-  <ng-template #empty>I'm thinking...</ng-template>
-  <div [className]="'toDo'" *ngIf="data$ | async as item ; else empty">{{ item.activity }}
-  </div>
-</section>
+<ng-container *ngIf="data$ | async as item">
+  <mat-card>
+    <mat-card-title>Are you bored?</mat-card-title>
+    <mat-card-content>
+      {{ item.activity }}
+    </mat-card-content>
+  </mat-card>
+</ng-container>

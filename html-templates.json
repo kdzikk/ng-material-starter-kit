@@ -93,9 +93,9 @@
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "$content$"
     },
-    "card-input": {
-      "container": "<mat-card *ngIf=\"$detailVariable$ | async as $detailVariable$\">\n$content$</mat-card>",
-      "content": "<mat-card-title>$title$</mat-card-title>\n<mat-card-content>$content$</mat-card-content>\n\"<input matInput type=\\\"text\\\" placeholder=\\\"$label$\\\" formControlName=\\\"$formControlName$\\\" required>\""
+    "container-mat-card": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $detailVariable$\">\n$content$</ng-container>",
+      "content": "<mat-card>$content$<mat-card-title>$title$</mat-card-title>\n<mat-card-content>\"</mat-card-content>\n</mat-card>"
     },
     "text": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
