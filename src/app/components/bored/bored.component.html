@@ -1,0 +1,7 @@
+
+<section>
+  <h1>Are you bored?</h1>
+  <ng-template #empty>I'm thinking...</ng-template>
+  <div [className]="'toDo'" *ngIf="data$ | async as item ; else empty">{{ item.activity }}
+  </div>
+</section>
