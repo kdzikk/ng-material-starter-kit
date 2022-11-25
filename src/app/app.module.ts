@@ -10,6 +10,7 @@ import {HolidaysSelectComponentModule} from "./components/holidays-select/holida
 import {CategoriesListComponentModule} from "./components/categories-list/categories-list.component-module";
 import {CheckboxCategoriesComponentModule} from "./components/checkbox-categories/checkbox-categories.component-module";
 import {ProductUpdateServiceModule} from "./services/product-update.service-module";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {ProductUpdateServiceModule} from "./services/product-update.service-modu
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

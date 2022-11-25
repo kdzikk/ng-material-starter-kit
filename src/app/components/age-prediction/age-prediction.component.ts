@@ -8,7 +8,7 @@ import { AgePredictionService } from '../../services/age-prediction.service';
   selector: 'app-age-prediction',
   templateUrl: './age-prediction.component.html',
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AgePredictionComponent {
   readonly details$: Observable<AgePredictionModel> = this._activatedRoute.params.pipe(
