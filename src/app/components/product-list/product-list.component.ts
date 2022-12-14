@@ -12,6 +12,8 @@ import {ProductsService} from '../../services/products.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductListComponent {
+
+
   readonly list$: Observable<ProductModel[]> = this._productsService.getAll();
 
   private _selectedProductIdSubject: Subject<string> = new Subject<string>();
